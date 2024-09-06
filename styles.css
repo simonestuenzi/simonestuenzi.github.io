@@ -8,7 +8,7 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: 1.8;
     background-color: #f4f4f4;
     color: #333;
     padding: 20px;
@@ -26,7 +26,7 @@ header {
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 100px 0; /* Adjust the padding to fit your design */
+    padding: 150px 0; /* Adjust the padding to fit your design */
 }
 
 header h1 {
@@ -36,7 +36,7 @@ header h1 {
 
 /* Navigation styles */
 nav {
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
     padding: 10px 0;
 }
 
@@ -135,6 +135,7 @@ section {
     padding: 20px;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
 }
 
 section h2 {
