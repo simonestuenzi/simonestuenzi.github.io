@@ -1,0 +1,198 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    position: relative;
+    text-align: center;
+}
+
+.banner {
+    background-image: url('images/banner.jpg'); /* Replace with your banner image path */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0; /* Adjust the padding to fit your design */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation styles */
+nav {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main content styling */
+main {
+    padding: 0px;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.text {
+    flex: 2;
+    line-height: 1.6; /* Adjust line spacing */
+}
+
+.text ul {
+    margin-left: 40px; /* Indent the list items */
+    list-style: disc; /* Style the list with bullets */
+}
+
+.cv-picture {
+    flex: 1;
+    text-align: center;
+    padding-right: 0px; /* Space between CV picture and contact list */
+}
+
+.cv-picture img {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+    border-radius: 80%;
+}
+
+/* Contact Summary Styling */
+.contact-summary {
+    margin-top: 20px;
+    margin-left: 220px;}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space between items */
+}
+
+.contact-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.contact-list a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#publications ul {
+    list-style-type: none; /* Removes bullet points */
+    padding-left: 0; /* Removes left padding */
+}
+#publications ul li {
+    margin-bottom: 10px; /* Adjust the value for more or less space */
+}
+#publications ul ul {
+    padding-left: 0; /* Ensures no indentation for nested lists */
+}
+
+/* General List Styling */
+.no-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Funding Section Styling */
+#funding {
+    margin-top: 40px;
+}
+
+#funding .text {
+    /* Adjust if needed */
+}
+
+#funding ul {
+    list-style: none; /* Ensure no bullets in funding section */
+    padding-left: 0; /* Remove left padding */
+}
+
+#funding ul ul {
+    padding-left: 0; /* Ensure no indentation for nested lists */
+}
+
+#funding .grant-details {
+    margin-bottom: 10px; /* Space between details within a year */
+}
+
+#funding .grant-details strong {
+    display: block;
+    margin-bottom: 5px; /* Space between label and value */
+}
+
+#funding .grant-details p {
+    margin: 0;
+}
