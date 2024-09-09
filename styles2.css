@@ -297,7 +297,7 @@ img {
 @media (max-width: 767px) {
     /* Ensure header and banner are spaced properly */
     header {
-        padding-top: 100px; /* Increase top padding to avoid overlap */
+        padding-top: 20px; /* Increase top padding to avoid overlap */
     }
 
     .banner {
