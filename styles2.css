@@ -310,9 +310,9 @@ img {
         padding: 15px 0; /* Add padding to make nav items more accessible */
     }
 
-    nav ul {
-        display: block; /* Ensure list items stack vertically */
-    }
+    */nav ul {
+*/ display: block; /* Ensure list items stack vertically */
+ */         }
 
     nav ul li {
         display: block;
