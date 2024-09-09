@@ -306,8 +306,8 @@ img {
 
     /* Adjust navigation for mobile */
     nav {
-        background: rgba(0, 0, 0, 0.7); /* More visible background for nav */
-        padding: 15px 0; /* Add padding to make nav items more accessible */
+        background: rgba(0, 0, 0, 0.4); /* More visible background for nav */
+        padding: 10px 0; /* Add padding to make nav items more accessible */
     }
 
     */nav ul {
