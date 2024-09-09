@@ -367,12 +367,17 @@ img {
         width: 60px;
         height: 60px;
     
-    /* Break long links */
-    a {
-        word-wrap: break-word; /* Break long words */
-        overflow-wrap: break-word; /* Break long words */
-        hyphens: auto; /* Optionally add hyphens for better word breaking */
-    }
+/* Break long links */
+a {
+    word-break: break-all; /* Break long words at any point */
+    overflow-wrap: break-word; /* Ensure long words are broken within their container */
+}
+
+/* Ensure containers are responsive */
+body, header, main, section {
+    word-break: break-word; /* Ensure containers allow breaking */
+}
+
 }
 }
 
