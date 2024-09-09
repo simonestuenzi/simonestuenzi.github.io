@@ -297,26 +297,28 @@ img {
 @media (max-width: 767px) {
     /* Ensure header and banner are spaced properly */
     header {
-        padding-top: 20px; /* Increase top padding to avoid overlap */
+        padding-top: 10px; /* Increase top padding to avoid overlap */
     }
 
     .banner {
-        padding: 150px 0; /* Adjust padding to fit mobile view */
+        padding: 100px 0; /* Adjust padding to fit mobile view */
     }
 
     /* Adjust navigation for mobile */
     nav {
         background: rgba(0, 0, 0, 0.4); /* More visible background for nav */
-        padding: 10px 0; /* Add padding to make nav items more accessible */
+        padding: 5px 0; /* Add padding to make nav items more accessible */
     }
 
-    */nav ul {
-*/ display: block; /* Ensure list items stack vertically */
- */         }
+    nav ul {
+        display: block; /* Ensure list items stack vertically */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Remove default margin */
+    }
 
     nav ul li {
         display: block;
-        margin: 10px 0; /* Space between nav items */
+        margin: 5px 0; /* Space between nav items */
     }
 
     /* Adjust content layout */
@@ -330,10 +332,35 @@ img {
     }
 
     .cv-picture {
+        width: 100%; /* Ensure CV picture takes full width */
         order: -1; /* Move CV picture before text */
         margin-bottom: 20px; /* Space below CV picture */
+        display: flex;
+        justify-content: center; /* Center the content */
+        align-items: center; /* Align items vertically */
+    }
+    .contact-summary {
+        width: 100%; /* Ensure contact summary takes full width */
+        margin-left: 0; /* Remove left margin for mobile */
     }
 
+    .contact-list {
+        display: flex;
+        flex-direction: column; /* Stack contact items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .contact-list li {
+        display: flex;
+        align-items: center; /* Align contact items vertically */
+        margin-bottom: 10px; /* Reduce space between items */
+    }
+
+    .contact-icon {
+        width: 60px; /* Adjust size as needed */
+        height: 60px; /* Adjust size as needed */
+        margin-right: 10px; /* Space between icon and text */
+    }
     /* Make icons larger if needed */
     .contact-icon {
         width: 60px;
