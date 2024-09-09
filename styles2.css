@@ -314,7 +314,8 @@ img {
         display: block; /* Ensure list items stack vertically */
         padding: 0; /* Remove default padding */
         margin: 0; /* Remove default margin */
-    }
+        text-align: center; /* Center-align text and nav items */
+   }
 
     nav ul li {
         display: block;
@@ -365,7 +366,14 @@ img {
     .contact-icon {
         width: 60px;
         height: 60px;
+    
+    /* Break long links */
+    a {
+        word-wrap: break-word; /* Break long words */
+        overflow-wrap: break-word; /* Break long words */
+        hyphens: auto; /* Optionally add hyphens for better word breaking */
     }
+}
 }
 
 /* General styles for larger screens */
