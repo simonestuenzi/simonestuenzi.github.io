@@ -119,7 +119,7 @@ main {
 .cv-picture img {
     width: 40%;
     max-width: 5px; /* Adjust as needed */
-    border-radius: 80%;
+    border-radius: 0%;
 }
 
 /* Limit the image size on larger screens */
@@ -297,11 +297,11 @@ img {
 @media (max-width: 767px) {
     /* Ensure header and banner are spaced properly */
     header {
-        padding-top: 10px; /* Increase top padding to avoid overlap */
+        padding-top: 5px; /* Increase top padding to avoid overlap */
     }
 
     .banner {
-        padding: 100px 0; /* Adjust padding to fit mobile view */
+        padding: 150px 0; /* Adjust padding to fit mobile view */
     }
 
     /* Adjust navigation for mobile */
