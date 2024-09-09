@@ -27,6 +27,7 @@ header {
     background-position: center;
     color: #f4f4f4;
     padding: 200px 0; /* Adjust the padding to fit your design */
+    position: relative; /* Ensure that child elements like nav can position relative to this */
 }
 
 header h1 {
@@ -36,8 +37,13 @@ header h1 {
 
 /* Navigation styles */
 nav {
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
-    padding: 10px 0;
+    position: absolute; /* Position nav absolutely */
+    bottom: 0; /* Align it at the top of the banner */
+    left: 0; /* Align it to the left edge */
+    width: 100%; /* Ensure it spans the full width of the header */
+    background: transparent; /* Remove the background */
+    padding: 20px 0; /* Add padding for better spacing */
+    z-index: 1; /* Ensure it appears on top of the banner image */
 }
 
 nav ul {
@@ -60,6 +66,27 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+/* Mobile Navigation Toggle Button */
+.nav-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+/* Hide the menu initially on small screens */
+.nav-menu {
+    display: none;
+}
+
+/* Show the menu when the toggle button is clicked */
+.nav-menu.active {
+    display: block;
 }
 
 /* Main content styling */
@@ -90,15 +117,24 @@ main {
 }
 
 .cv-picture img {
-    width: 100%;
-    max-width: 200px; /* Adjust as needed */
+    width: 40%;
+    max-width: 5px; /* Adjust as needed */
     border-radius: 80%;
+}
+
+/* Limit the image size on larger screens */
+@media (min-width: 168px) {
+    .cv-picture img {
+        max-width: 30px; /* Adjust this value as needed */
+        height: auto;
+    }
 }
 
 /* Contact Summary Styling */
 .contact-summary {
     margin-top: 20px;
-    margin-left: 220px;}
+    margin-left: 220px;
+}
 
 .contact-list {
     list-style: none;
@@ -113,8 +149,8 @@ main {
 }
 
 .contact-icon {
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     margin-right: 10px; /* Space between icon and text */
 }
 
@@ -153,9 +189,11 @@ footer {
     list-style-type: none; /* Removes bullet points */
     padding-left: 0; /* Removes left padding */
 }
+
 #publications ul li {
     margin-bottom: 10px; /* Adjust the value for more or less space */
 }
+
 #publications ul ul {
     padding-left: 0; /* Ensures no indentation for nested lists */
 }
@@ -196,4 +234,61 @@ footer {
 
 #funding .grant-details p {
     margin: 0;
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 768px) {
+    .banner {
+        padding: 100px 0; /* Reduce padding for smaller screens */
+        background-position: top; /* Adjust background position */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    nav ul {
+        display: block; /* Stack navigation items vertically */
+        text-align: left; /* Align text to the left */
+    }
+
+    nav ul li {
+        display: block; /* Stack list items */
+        margin: 10px 0; /* Add margin for spacing between items */
+    }
+
+    nav ul li a {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    .contact-summary {
+        margin-left: 0; /* Remove left margin on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .banner {
+        padding: 50px 0; /* Further reduce padding for small phones */
+    }
+
+    header h1 {
+        font-size: 1.8em; /* Further reduce font size for small phones */
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Further adjust font size */
+    }
+    
+    .contact-summary {
+        margin-left: 0; /* Ensure no margin on very small screens */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

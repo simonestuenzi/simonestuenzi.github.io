@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simone Maria Stuenzi</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles2.css">
     <style>
         .record {
             margin: 20px 0;
@@ -28,16 +28,16 @@
 </head>
 <body>
     <header>
-        <div class="banner">
+        <div class="banner" role="img" aria-label="Banner Image">
             <h1>Simone Maria Stuenzi</h1>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#funding">Funding</a></li>
-            </ul>
-        </nav>
+        <nav role="navigation">
+    	<ul>
+        	<li><a href="#about">About Me</a></li>
+        	<li><a href="#publications">Publications</a></li>
+        	<li><a href="#funding">Funding</a></li>
+   	 </ul>
+	</nav>
     </header>
 
     <main>
@@ -55,7 +55,7 @@
                     <p>Since my Master studies, I have been fascinated with the interactions between ecosystem components and their behavior under changing climatic circumstances. I focus on vast boreal forest-covered permafrost regions in Siberia and Canada, accounting for one-third of the global forest cover—an essential component for regional and global climate patterns. The forests insulate the underlying permafrost efficiently. The canopy exerts shading, changes the surface albedo, decreases the soil moisture, and promotes the accumulation of an organic surface layer, which insulates the soil from the atmosphere. Changing climatic conditions can promote an increasing active-layer depth or trigger the partial disappearance of the near-surface permafrost. Climatic changes trigger extensive ecosystem shifts like a change in composition, density, or the distribution of vegetation and result in changes to the below- and within-canopy radiation fluxes. These changes to the vegetation–permafrost dynamics can highly impact the numerous feedback mechanisms between the two ecosystem components, which will feed back into global climate patterns. My work aims to understand how the interactions between vegetation, permafrost, and the atmosphere stabilize the forests and the underlying permafrost and how this is modified under changes.</p>
                 </div>
                 <div class="cv-picture">
-                    <img src="images/cv-picture.jpg" alt="CV Picture">
+                    <img src="images/cv-picture.jpg" alt="CV Picture" style="max-width: 100%; height: auto;">
                     <div class="contact-summary">
                         <ul class="contact-list">
                             <li>
@@ -194,9 +194,11 @@
         </div>
     </div>
 </section>
-    <footer>
+<footer>
+    <div class="container">
         <p>&copy; 2024 Simone Maria Stuenzi</p>
-    </footer>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
