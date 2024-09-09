@@ -292,3 +292,83 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* General styles for mobile devices */
+@media (max-width: 767px) {
+    /* Ensure header and banner are spaced properly */
+    header {
+        padding-top: 100px; /* Increase top padding to avoid overlap */
+    }
+
+    .banner {
+        padding: 150px 0; /* Adjust padding to fit mobile view */
+    }
+
+    /* Adjust navigation for mobile */
+    nav {
+        background: rgba(0, 0, 0, 0.7); /* More visible background for nav */
+        padding: 15px 0; /* Add padding to make nav items more accessible */
+    }
+
+    nav ul {
+        display: block; /* Ensure list items stack vertically */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0; /* Space between nav items */
+    }
+
+    /* Adjust content layout */
+    .content {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .text, .cv-picture {
+        width: 100%; /* Ensure both text and CV picture take full width */
+        margin: 0;
+    }
+
+    .cv-picture {
+        order: -1; /* Move CV picture before text */
+        margin-bottom: 20px; /* Space below CV picture */
+    }
+
+    /* Make icons larger if needed */
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* General styles for larger screens */
+@media (min-width: 768px) {
+    /* Maintain original styles for desktop and larger screens */
+    header {
+        padding-top: 0; /* Reset top padding */
+    }
+
+    .banner {
+        padding: 200px 0; /* Original padding for larger screens */
+    }
+
+    /* Ensure navigation is horizontal */
+    nav ul {
+        display: flex;
+        justify-content: center; /* Center align nav items */
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    .content {
+        flex-direction: row; /* Align content side by side */
+    }
+
+    .cv-picture {
+        order: 0; /* Reset order for larger screens */
+    }
+}
+
