@@ -28,7 +28,7 @@ header {
     background-size: cover;
     background-position: bottom 40% center; /* Align the bottom and center horizontally */
     color: #f4f4f4;
-    padding: 100px 0; /* Adjust padding for mobile view */
+    padding: 200px 0; /* Adjust padding for mobile view */
     position: relative; /* Ensure banner is positioned relative to its container */
     display: flex; /* Use flexbox to center contents */
     justify-content: center; /* Center horizontally */
@@ -255,5 +255,7 @@ section h2 {
 
 /* General styles for larger screens */
 @media (min-width: 768px) {
+       .banner {
+        padding: 1000px 0; /* Adjust padding for medium screens */
     }
 }
