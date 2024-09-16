@@ -8,7 +8,7 @@
 /* Body styles */
 body {
     font-family: Arial, sans-serif;
-    line-height: 2;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #444;
     padding: 20px;
@@ -22,30 +22,30 @@ header {
     color: #f4f4f4;
 }
 
+/* Banner styles */
 .banner {
     background-image: url('images/banner.jpg'); /* Replace with your banner image path */
     background-size: cover;
-    background-position: center 60%; /* Adjust position to show more of the lower part */
+    background-position: bottom 40% center; /* Align the bottom and center horizontally */
     color: #f4f4f4;
-    padding: 150px 0 200px; /* Adjust the top padding to reduce the space inside the banner */
-    position: relative;
+    padding: 100px 0; /* Adjust padding for mobile view */
+    position: relative; /* Ensure banner is positioned relative to its container */
+    display: flex; /* Use flexbox to center contents */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 /* Header title */
 header h1 {
-    margin: 65px;
-    font-size: 50px;
+    font-size: 3em; /* Adjust font size for readability */
     color: #f4f4f4;
 }
 
 /* Contact icons and links */
 .contact-summary {
-    position: absolute; /* Position relative to the banner */
-    top: 20px; /* Distance from the top of the banner */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for centering */
     text-align: center;
-    margin: 0; /* Remove margin to avoid extra spacing */
+    position: relative; /* Remove absolute positioning */
+    width: 100%; /* Ensure it takes full width */
 }
 
 .contact-list {
@@ -53,8 +53,9 @@ header h1 {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between items */
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Space between items */
 }
 
 .contact-list li {
@@ -63,8 +64,8 @@ header h1 {
 }
 
 .contact-icon {
-    width: 60px;
-    height: 60px;
+    width: 40px; /* Adjust size for mobile */
+    height: 40px; /* Adjust size for mobile */
     margin-right: 10px; /* Space between icon and text */
 }
 
@@ -81,30 +82,27 @@ header h1 {
 
 /* Navigation styles */
 nav {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: transparent;
-    padding: 20px 0;
-    z-index: 1;
+    padding: 0 0; 
+    position: relative; 
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
     margin: 0;
+    text-align: center;
+    display: flex; /* Flexbox for horizontal alignment */
+    flex-direction: column; /* Stack items vertically on mobile */
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 0; /* Space between items */
 }
 
 nav ul li a {
-    color: #f4f4f4;
+    color: white;
     text-decoration: none;
+    font-size: 1.2em; /* Adjust font size for readability */
 }
 
 nav ul li a:hover {
@@ -147,26 +145,26 @@ main {
 /* Main content layout */
 .content {
     display: flex;
-    flex-direction: row; /* Arrange text and CV picture horizontally */
+    flex-direction: column; /* Stack content vertically for mobile */
     gap: 20px; /* Space between text and CV picture */
     align-items: flex-start; /* Align items to the top */
     flex-wrap: wrap; /* Ensure responsiveness */
 }
 
 .text {
-    flex: 2;
+    width: 100%; /* Full width for text on mobile */
     line-height: 1.6;
 }
 
 .text ul {
-    margin-left: 40px; /* Indent the list items */
+    margin-left: 20px; /* Adjust indent for mobile */
     list-style: disc;
 }
 
 /* Styling for CV picture */
 .cv-picture {
     text-align: center;
-    flex: 1;
+    width: 100%; /* Full width for CV picture on mobile */
 }
 
 .cv-picture img {
@@ -189,175 +187,6 @@ section h2 {
     color: #333;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    margin-top: 30px;
-}
-
-#publications ul {
-    list-style-type: none; /* Removes bullet points */
-    padding-left: 0; /* Removes left padding */
-}
-
-#publications ul li {
-    margin-bottom: 10px; /* Adjust the value for more or less space */
-}
-
-#publications ul ul {
-    padding-left: 0; /* Ensures no indentation for nested lists */
-}
-
-/* General List Styling */
-.no-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-/* Funding Section Styling */
-#funding {
-}
-
-#funding .text {
-    /* Adjust if needed */
-}
-
-#funding ul {
-    list-style: none; /* Ensure no bullets in funding section */
-    padding-left: 0; /* Remove left padding */
-}
-
-#funding ul ul {
-    padding-left: 0; /* Ensure no indentation for nested lists */
-}
-
-#funding .grant-details {
-    margin-bottom: 10px; /* Space between details within a year */
-}
-
-#funding .grant-details strong {
-    display: block;
-    margin-bottom: 5px; /* Space between label and value */
-}
-
-#funding .grant-details p {
-    margin: 0;
-}
-
-/* Media Queries for responsive design */
-@media only screen and (max-width: 768px) {
-    .banner {
-        padding: 100px 0; /* Reduce padding for smaller screens */
-        background-position: top; /* Adjust background position */
-    }
-
-    header h1 {
-        font-size: 2em; /* Reduce font size for smaller screens */
-    }
-
-    nav ul {
-        display: block; /* Stack navigation items vertically */
-        text-align: left; /* Align text to the left */
-    }
-
-    nav ul li {
-        display: block; /* Stack list items */
-        margin: 10px 0; /* Add margin for spacing between items */
-    }
-
-    nav ul li a {
-        font-size: 1.2em; /* Adjust font size for smaller screens */
-    }
-
-    .nav-toggle {
-        display: block; /* Show the toggle button on smaller screens */
-    }
-
-    .contact-summary {
-        margin-left: 0; /* Remove left margin on smaller screens */
-    }
-
-    .content {
-        flex-direction: column; /* Stack content vertically */
-    }
-
-    .text, .cv-picture {
-        width: 100%; /* Ensure both text and CV picture take full width */
-        margin: 0;
-    }
-
-    .cv-picture {
-        margin-bottom: 20px; /* Space below CV picture */
-        display: flex;
-        justify-content: center; /* Center the content */
-        align-items: center; /* Align items vertically */
-    }
-    .contact-summary {
-        width: 100%; /* Ensure contact summary takes full width */
-        margin-left: 0; /* Remove left margin for mobile */
-    }
-
-    .contact-list {
-        display: flex;
-        flex-direction: column; /* Stack contact items vertically */
-        align-items: center; /* Center items horizontally */
-    }
-
-    .contact-list li {
-        display: flex;
-        align-items: center; /* Align contact items vertically */
-        margin-bottom: 10px; /* Reduce space between items */
-    }
-
-    .contact-icon {
-        width: 60px; /* Adjust size as needed */
-        height: 60px; /* Adjust size as needed */
-        margin-right: 10px; /* Space between icon and text */
-    }
-    
-    /* Break long links */
-    a {
-        word-break: break-all; /* Break long words at any point */
-        overflow-wrap: break-word; /* Ensure long words are broken within their container */
-    }
-
-    /* Ensure containers are responsive */
-    body, header, main, section {
-        word-break: break-word; /* Ensure containers allow breaking */
-    }
-}
-
-/* General styles for larger screens */
-@media (min-width: 768px) {
-    /* Maintain original styles for desktop and larger screens */
-    header {
-        padding-top: 0; /* Reset top padding */
-    }
-
-    .banner {
-        padding: 200px 0; /* Original padding for larger screens */
-    }
-
-    /* Ensure navigation is horizontal */
-    nav ul {
-        display: flex;
-        justify-content: center; /* Center align nav items */
-    }
-
-    nav ul li {
-        display: inline-block;
-        margin: 0 15px;
-    }
-
-    .content {
-        flex-direction: row; /* Align content side by side */
-    }
-
-    .cv-picture {
-        order: 1; /* Position CV picture to the right of the text */
-    }
-}
 /* CV Section Styles */
 #cv {
     background-color: #fff; /* Background color of the section */
@@ -385,4 +214,46 @@ footer {
 
 .cv-subsection ul li {
     margin-bottom: 10px; /* Space between list items */
+}
+
+/* Media Queries for responsive design */
+@media only screen and (max-width: 768px) {
+    .banner {
+        padding: 60px 0; /* Further reduce padding for very small screens */
+        background-position: bottom 40% center; /* Align the bottom and center horizontally */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduce font size for smaller screens */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .contact-summary {
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .contact-list {
+        flex-direction: column; /* Stack contact items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .contact-list li {
+        margin-bottom: 20px; /* Reduce space between items */
+    }
+
+    .cv-picture img {
+        max-width: 100%; /* Ensure image fits container */
+    }
+}
+
+/* General styles for larger screens */
+@media (min-width: 768px) {
+    }
 }
