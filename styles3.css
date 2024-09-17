@@ -213,7 +213,8 @@ section h2 {
 }
 
 .cv-subsection ul li {
-    margin-bottom: 10px; /* Space between list items */
+    margin-bottom: 15px; /* Space between list items */
+    margin-top: 15px; /* Space between list items */
 }
 
 /* Media Queries for responsive design */
@@ -258,4 +259,89 @@ section h2 {
        .banner {
         padding: 1000px 0; /* Adjust padding for medium screens */
     }
+}
+
+/* Publications Section Styles */
+#publications {
+    background-color: #fff; /* Background color of the section */
+    padding: 20px; /* Padding around the section */
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a card effect */
+    margin-top: 20px; /* Space above the section */
+}
+
+#publications h2 {
+    margin-bottom: 15px; /* Space below the section title */
+    color: #333; /* Color of the title */
+}
+
+/* Subsection styling within publications */
+#publications .publications-subsection {
+    margin-bottom: 20px; /* Space between different years sections */
+}
+
+#publications .publications-subsection > strong {
+    display: block; /* Make the year a block element */
+    font-size: 1.2em; /* Font size similar to CV section titles */
+    margin-bottom: 10px; /* Space below the year */
+    color: #444; /* Color of the year */
+}
+
+#publications .publications-subsection ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding-left: 20px; /* Indent the publication list items */
+    margin: 0; /* Remove default margin */
+}
+
+#publications .publications-subsection ul li {
+    margin-bottom: 15px; /* Space between list items */
+}
+/* Funding Section Styles */
+#funding {
+    background-color: #fff; /* Background color of the section */
+    padding: 20px; /* Padding around the section */
+    border-radius: 8px; /* Rounded corners for the section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for a card effect */
+    margin-top: 20px; /* Space above the section */
+}
+
+#funding h2 {
+    margin-bottom: 15px; /* Space below the section title */
+    color: #333; /* Color of the title */
+}
+
+/* Subsection styling within funding */
+#funding .funding-subsection {
+    margin-bottom: 20px; /* Space between different years sections */
+}
+
+#funding .funding-subsection > strong {
+    display: block; /* Make the year a block element */
+    font-size: 1.2em; /* Font size similar to CV section titles */
+    margin-bottom: 10px; /* Space below the year */
+    color: #444; /* Color of the year */
+}
+
+#funding .funding-subsection ul {
+    list-style-type: none; /* Remove bullet points from the list */
+    padding-left: 20px; /* Indent the grant details */
+    margin: 0; /* Remove default margin */
+}
+
+#funding .funding-subsection ul li {
+    margin-bottom: 20px; /* Space between different grant items */
+}
+
+#funding .grant-details {
+    margin-bottom: 10px; /* Space between different grant details */
+}
+
+#funding .grant-details p {
+    margin: 5px 0; /* Margin around paragraphs in grant details */
+}
+
+#funding .grant-details strong {
+    display: block; /* Make labels for grant details block elements */
+    font-weight: bold; /* Bold for labels */
+    margin-bottom: 5px; /* Space below the labels */
 }
